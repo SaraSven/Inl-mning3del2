@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="hej">hej</h1>
+    <script>
+   
+
+// lagrar talet prompt tar in i en variabel
+let num = prompt("tal");
+
+//gör en variabel som innehåller samma värde som num
+let result = num;
+
+//funktion som tar num som parameter
+function fact (num) {
+
+    //är num 0 eller ett blir resultatet 1
+    if (num === 0 || num === 1) {
+        
+        //ändrar rubriken jag har som skriver ut ett
+        let fac = document.getElementById("hej");
+        fac.innerHTML = "1";
+    }
+    //är num större än tusen så står det för högt
+    if (num > 1000) {
+        let fac = document.getElementById("hej");
+        fac.innerHTML = "för högt";
+    }
+    //om num är ett giltligt tal dvs större än 1 men mindre än 1000 kommer vi in i en while loop
+    else {
+        //körs så länge num är större än 1
+        while (num > 1) { 
+            //decrementerar num
+        num--;
+        //lagrar result som är samma som num * num i result
+        result *= num;
+        let fac = document.getElementById("hej");
+        if (result===Infinity) {
+            fac.innerHTML = "för högt";
+        }
+        else {
+            //ändrar rubriken till resultatet
+            fac.innerHTML = result;
+        }
+  }
+
+        
+    }
+}
+//anropar funktionen
+fact(num);
+        
+        </script>
+</body>
+</html>
